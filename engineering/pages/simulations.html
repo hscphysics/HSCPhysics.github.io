@@ -1,0 +1,81 @@
+<div class="card">
+    <h2>🔧 Engineering Simulations</h2>
+    
+    <h3>Machines Calculator (MA, VR, Efficiency)</h3>
+    <div class="simulation-container">
+        <div class="controls">
+            <div class="control-group">
+                <label>Load Force (N):</label>
+                <input type="number" id="loadForce" value="500" oninput="calcMachine()" style="padding: 0.5rem; border-radius: 6px; border: 2px solid var(--primary); font-size: 1rem;">
+            </div>
+            <div class="control-group">
+                <label>Effort Force (N):</label>
+                <input type="number" id="effortForce" value="100" oninput="calcMachine()" style="padding: 0.5rem; border-radius: 6px; border: 2px solid var(--primary); font-size: 1rem;">
+            </div>
+            <div class="control-group">
+                <label>Load Distance (m):</label>
+                <input type="number" id="loadDist" value="1" step="0.1" oninput="calcMachine()" style="padding: 0.5rem; border-radius: 6px; border: 2px solid var(--primary); font-size: 1rem;">
+            </div>
+            <div class="control-group">
+                <label>Effort Distance (m):</label>
+                <input type="number" id="effortDist" value="5" step="0.1" oninput="calcMachine()" style="padding: 0.5rem; border-radius: 6px; border: 2px solid var(--primary); font-size: 1rem;">
+            </div>
+        </div>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #F8F9FA; border-radius: 8px;">
+            <h4 style="margin-top: 0;">Calculations:</h4>
+            <p><strong>MA (Load/Effort):</strong> <span id="maResult" style="color: var(--primary); font-weight: 700;">-</span></p>
+            <p><strong>VR (Effort Dist/Load Dist):</strong> <span id="vrResult" style="color: var(--secondary); font-weight: 700;">-</span></p>
+            <p><strong>Efficiency (MA/VR × 100%):</strong> <span id="effResult" style="color: var(--success); font-weight: 700;">-</span></p>
+            <p><strong>Work In:</strong> <span id="workIn" style="font-weight: 700;">-</span></p>
+            <p><strong>Work Out:</strong> <span id="workOut" style="font-weight: 700;">-</span></p>
+        </div>
+    </div>
+
+    <h3 style="margin-top: 3rem;">Simple Beam Bending</h3>
+    <div class="simulation-container">
+        <div class="canvas-wrapper">
+            <canvas id="beamCanvas" width="800" height="300"></canvas>
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <label>Load (kN):</label>
+                <input type="range" id="loadSlider" min="1" max="50" value="10" oninput="updateBeam()">
+                <span class="value-display" id="loadValue">10 kN</span>
+            </div>
+            <div class="control-group">
+                <label>Length (m):</label>
+                <input type="range" id="lengthSlider" min="2" max="10" value="5" oninput="updateBeam()">
+                <span class="value-display" id="lengthValue">5 m</span>
+            </div>
+        </div>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #F8F9FA; border-radius: 8px;">
+            <h4 style="margin-top: 0;">Results:</h4>
+            <p><strong>Deflection:</strong> <span id="deflection" style="color: var(--primary); font-weight: 700;">-</span></p>
+            <p><strong>Status:</strong> <span id="status" style="font-weight: 700;">-</span></p>
+        </div>
+    </div>
+
+    <h3 style="margin-top: 3rem;">Circuit Simulator (Ohm's Law)</h3>
+    <div class="simulation-container">
+        <div class="canvas-wrapper">
+            <canvas id="circuitCanvas" width="800" height="300"></canvas>
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <label>Voltage (V):</label>
+                <input type="range" id="voltageSlider" min="1" max="24" value="12" oninput="updateCircuit()">
+                <span class="value-display" id="voltageValue">12 V</span>
+            </div>
+            <div class="control-group">
+                <label>Resistance (Ω):</label>
+                <input type="range" id="resistanceSlider" min="10" max="1000" value="100" step="10" oninput="updateCircuit()">
+                <span class="value-display" id="resistanceValue">100 Ω</span>
+            </div>
+        </div>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #F8F9FA; border-radius: 8px;">
+            <h4 style="margin-top: 0;">Calculations:</h4>
+            <p><strong>Current (I = V/R):</strong> <span id="current" style="color: var(--secondary); font-weight: 700;">-</span></p>
+            <p><strong>Power (P = V×I):</strong> <span id="power" style="color: var(--secondary); font-weight: 700;">-</span></p>
+        </div>
+    </div>
+</div>

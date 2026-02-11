@@ -1,0 +1,189 @@
+Engineering Studies Revision Hub - Modular File Structure
+=========================================================
+
+📦 Your Website Folder/
+│
+├── 📄 index.html                  ← OPEN THIS FILE IN BROWSER
+│   └── Main page with navigation & content loader
+│
+├── 📄 README.md                   ← Technical documentation
+├── 📄 QUICK_START_GUIDE.md       ← How to use & edit (START HERE!)
+├── 📄 WHAT_CHANGED.md            ← Explanation of structure
+└── 📄 FOLDER_STRUCTURE.txt       ← This file
+│
+├── 📁 css/
+│   └── 📄 styles.css             ← All styling (colors, layouts, boxes)
+│       ├── Variables (colors)
+│       ├── Layout styles
+│       ├── Card styles
+│       ├── Box styles (formula, example, note, etc.)
+│       ├── Flashcard styles
+│       ├── Quiz styles
+│       ├── Simulation styles
+│       └── Responsive design
+│
+├── 📁 js/
+│   ├── 📄 main.js                ← Navigation & page loading
+│   │   ├── loadPage() function
+│   │   ├── Nav button handling
+│   │   └── Page initialization
+│   │
+│   ├── 📄 flashcards.js          ← Flashcard data & functions
+│   │   ├── 35 flashcard Q&A pairs
+│   │   ├── flipCard()
+│   │   ├── nextCard()
+│   │   ├── previousCard()
+│   │   └── updateCard()
+│   │
+│   ├── 📄 simulations.js         ← Calculator & simulation logic
+│   │   ├── calcMachine() - MA/VR/Efficiency
+│   │   ├── updateBeam() - Beam bending
+│   │   └── updateCircuit() - Ohm's law
+│   │
+│   └── 📄 quiz.js                ← Quiz questions & scoring
+│       ├── 15 quiz questions
+│       ├── selectAnswer()
+│       ├── showScore()
+│       └── resetQuiz()
+│
+└── 📁 pages/
+    ├── 📄 home.html              ← Welcome page
+    │   └── 5 clickable module cards
+    │
+    ├── 📄 syllabus.html          ← BIGGEST FILE - All syllabus content
+    │   ├── Year 11 Preliminary
+    │   │   ├── Module 1: Three Disciplines
+    │   │   │   ├── Civil Engineering
+    │   │   │   ├── Mechanical Engineering
+    │   │   │   └── Electrical Engineering
+    │   │   │
+    │   │   ├── Module 2: Engineering Mechanics
+    │   │   │   ├── Statics
+    │   │   │   ├── Dynamics
+    │   │   │   └── Simple Machines (ALL 6 TYPES)
+    │   │   │       ├── 1. Lever (3 classes)
+    │   │   │       ├── 2. Wheel & Axle
+    │   │   │       ├── 3. Pulley
+    │   │   │       ├── 4. Inclined Plane
+    │   │   │       ├── 5. Wedge
+    │   │   │       └── 6. Screw
+    │   │   │
+    │   │   ├── Module 3: Engineering Materials
+    │   │   │   ├── Properties
+    │   │   │   ├── Types
+    │   │   │   └── Selection Criteria
+    │   │   │
+    │   │   └── Module 4: Engineering Communication
+    │   │       ├── Technical Drawing
+    │   │       └── Engineering Reports
+    │   │
+    │   └── Year 12 HSC
+    │       ├── Module 1: Civil Structures
+    │       │   ├── Structure Types
+    │       │   ├── Loads
+    │       │   └── Bridge Types
+    │       │
+    │       ├── Module 2: Personal & Public Transport
+    │       │   ├── Vehicle Dynamics
+    │       │   ├── Safety Features
+    │       │   └── Aerodynamics
+    │       │
+    │       ├── Module 3: Aeronautical Engineering
+    │       │   ├── Four Forces of Flight
+    │       │   └── Control Surfaces
+    │       │
+    │       ├── Module 4: Telecommunications
+    │       │   ├── Signals
+    │       │   ├── Modulation
+    │       │   ├── EM Spectrum
+    │       │   └── Transmission Media
+    │       │
+    │       ├── Module 5: Biomedical Engineering
+    │       │   ├── Medical Imaging
+    │       │   ├── Biomaterials
+    │       │   └── Medical Devices
+    │       │
+    │       └── Module 6: Engineering Report
+    │           └── Requirements
+    │
+    ├── 📄 flashcards.html        ← Flashcard interface
+    │   ├── Card display (front/back)
+    │   ├── Flip functionality
+    │   └── Navigation buttons
+    │
+    ├── 📄 simulations.html       ← Interactive tools
+    │   ├── Machine Calculator
+    │   │   ├── Input fields
+    │   │   └── Results display
+    │   │
+    │   ├── Beam Bending Simulator
+    │   │   ├── Canvas visualization
+    │   │   ├── Load slider
+    │   │   └── Length slider
+    │   │
+    │   └── Circuit Simulator
+    │       ├── Canvas visualization
+    │       ├── Voltage slider
+    │       └── Resistance slider
+    │
+    ├── 📄 practice.html          ← Quiz interface
+    │   ├── Question container
+    │   ├── Score display
+    │   └── Reset button
+    │
+    └── 📄 notes.html             ← Summary sheets
+        ├── Year 11 Formula Sheet
+        ├── Year 12 Formula Sheet
+        ├── Simple Machines Reference
+        └── Key Concepts Checklist
+
+
+QUICK REFERENCE - WHERE TO EDIT WHAT
+=====================================
+
+Want to ADD/EDIT...          →  Edit this file...
+─────────────────────────────────────────────────────────
+Syllabus content             →  pages/syllabus.html
+Flashcard questions          →  js/flashcards.js
+Quiz questions               →  js/quiz.js
+Summary sheets/formulas      →  pages/notes.html
+Colors/styling               →  css/styles.css
+Navigation buttons           →  index.html
+Add new simulation           →  pages/simulations.html + js/simulations.js
+
+
+BOX STYLES AVAILABLE IN SYLLABUS
+=================================
+
+<div class="formula-box">     → Blue box for formulas
+<div class="example-box">     → Green box for examples
+<div class="note-box">        → Yellow box for important notes
+<div class="key-concept">     → Red box for critical concepts
+<div class="analogy">         → Purple box for analogies
+
+
+FILE SIZE SUMMARY
+=================
+
+Total Files: 13
+Total Size: ~3000 lines (was 15,000+ in single file!)
+
+Largest Files:
+- syllabus.html (~900 lines) - All course content
+- styles.css (~400 lines) - All styling
+- flashcards.js (~80 lines) - 35 flashcards
+- quiz.js (~90 lines) - 15 questions
+
+All other files: 20-50 lines each
+
+
+HOW THE SITE WORKS
+==================
+
+1. User opens index.html
+2. Browser loads CSS (styles.css)
+3. Browser loads JavaScript (main.js, flashcards.js, etc.)
+4. main.js loads home.html into content area
+5. User clicks navigation → loads different page
+6. JavaScript initializes features for that page
+7. Everything works offline, no server needed!
