@@ -11,7 +11,7 @@ async function loadPage(pageName) {
     
     // Load the page content
     try {
-        const response = await fetch(`pages/${pageName}.html`);
+        const response = await fetch(`https://hscphysics.github.io/engineering/pages/${pageName}.html`);
         const html = await response.text();
         contentArea.innerHTML = html;
         
